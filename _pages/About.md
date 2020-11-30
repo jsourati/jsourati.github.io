@@ -6,9 +6,8 @@ description: <em>Department of Sociology, University of Chicago</em>
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: personal_.jpg
   address: >
-      <p>No, I do not look like Albert!</p>
 
 news: false  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
