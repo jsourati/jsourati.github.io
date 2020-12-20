@@ -25,7 +25,7 @@ nav: true
 
 <h3><b> Education </b></h3>
 <ul>
-    <li>Northeaster University, Boston MA</li>
+    <li>Northeastern University, Boston MA</li>
     Ph.D. in Electrical and Computer Engineering
     <br><em>January 2011 - December 2016</em>
     <br>  <br>
