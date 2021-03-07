@@ -29,7 +29,7 @@ nav: true
     Ph.D. in Electrical and Computer Engineering
     <br><em>January 2011 - December 2016</em>
     <br>  <br>
-    <li>Sharif University of Technology</li>
+    <li>Sharif University of Technology, Tehran, Iran</li>
     B.Sc. in Electrical Engineering
     <br><em>September 2006-December 2010 </em>
 </ul>
