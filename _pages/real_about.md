@@ -19,7 +19,7 @@ nav: true
     <br>  <br>
     <li>Boston Children's Hospital, Harvard Medical School, Boston MA</li>
     Post-doctoral Research Fellow at Computational Radiology Laboratory
-    <br><em>June 2017-October 2019 </em>
+    <br><em>June 2017 - October 2019 </em>
 </ul>
 
 
@@ -31,5 +31,5 @@ nav: true
     <br>  <br>
     <li>Sharif University of Technology, Tehran, Iran</li>
     B.Sc. in Electrical Engineering
-    <br><em>September 2006-December 2010 </em>
+    <br><em>September 2006 - December 2010 </em>
 </ul>
