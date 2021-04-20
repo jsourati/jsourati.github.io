@@ -17,7 +17,11 @@ My projects could be divided into two distinct groups: (1) developing generic Ac
      <li><a href="#AppAL">Application to Medical Image Processing </a></li>
      <li><a href="#ULAL">Interactive Unsupervised Learning </a></li>
   </ul>
-  <li><a href="#SoS">Social Analysis of Scientific Knowledge Discoveries </a></li>
+  <li><a href="#SoS">Science of Science </a></li>
+  <ul>
+     <li><a href="#human_AI">Human AI for Accelerating Future Discoveries </a></li>
+     <li><a href="#alien_AI">Alien AI for Punctuating Disruptive Discoveries </a></li>
+  </ul>
 </ul>
 
 
@@ -89,11 +93,41 @@ The idea of entropy-based US can also be applied in this problem, but with the s
 <a href="#top">Back to Top </a>
 
 <a name="SoS"></a>
-<h3><b> Social Analysis of Scientific Knowledge Discoveries </b></h3>
-My personal interests on social science topics and humanities drove me to start a second post-doc at Knowledge Lab in the Sociology Department of University of Chicago. In there, supervised by prominent computational sociologist James A. Evans, I becamse familiar with the topic of Science of Science and started a project about social aspects of scientific knowledge discoveries. 
+<h3><b> Science of Science </b></h3>
+My personal interests in humanities and social sciences drove me to start a second post-doc at Knowledge Lab in the Sociology Department of University of Chicago. In there, supervised by prominent computational sociologist James A. Evans, I becamse familiar with the topic of Science of Science and started a project about social aspects of scientific knowledge discoveries. 
 
-We investigated the importance of incorporating authors and their interconnections in the analysis of scientific findings. The intuition behind our work was that scientists are the main workforce of science's engine and it is required to take into account their roles when analyzing advancement of scinece. Our numerical results supported this intuition and confirmed a huge improving effect when considering social aspects of science as well as its contents.
+<a name="human_AI"></a>
+<h4><b> Human AI for Accelerating Future Discoveries </b></h4>
+We investigated the importance of incorporating authors and their interconnections in the computational modeling of scientific findings. Artificial intelligence (AI) algorithms have been developed over scientific publications to automatically identify discovery candidates from a vast space of all possible combinatorial scientific knowledge. The number of possible candidates is so large in many disciplines that manual, exhaustive search through the possibilities has become intractable. As an example, a work by <a href="https://www.nature.com/articles/s41586-019-1335-8"> Tshitoyan et al. (2019) </a> proposed to utilize <a href="https://papers.nips.cc/paper/2013/file/9aa42b31882ec039965f3c4923ce901b-Paper.pdf">skipgram word2vec model</a> in the field of materials science to predict which materials possess electrochemical properties such as thermoelectricity. They showed that their model could achieve the precision of %40 in predicting future discoveries occurring in two decades by building their word embedding model only based on the prior knowledge, with no relevant scientific knowledge. This work and other similar algorithms in this line of research neglect authors of the publications that they used to create their models. The idea in our project was that scientists and experts, the main workforce of science's engine, are those who push forward the limits of knowlege in varios fields and it seems crucial to take their roles into account when analyzing advancement of scinece.
 
-Our findings in this direction will be reported in a paper that is in prepartion at this time. More materials will be uploaded soon. Please bear with us.
+Interestingly, incorporating distribution of experts in predicting the future discoveries boosted the results' precision. The intuition is that a piece of knowledge would be unfolded only when its scientific plausibility is joined by enough attention paid by human scientists. For instance, if material X actually shows thermoelectric effects in reality, this property will not be discovered as long as there is no experts around to put forth this hypothesis and then experiment it. Hence, *cognitive availability* is key to discovering scietific knowledge. In order to incorporate expert distribution into our model, we built a hypergraph that included both author nodes and conceptual nodes (e.g., materials and their properties). The hyperedges comprised of papers linking nodes based on the authorship and mention of the materials/properties in their title or abstract. We then predict the future hypotheses by pairing material-property nodes with the largest hypergraph-induced similarities, which could be measured by any graph representation algorithm such as <a href="https://dl.acm.org/doi/10.1145/2623330.2623732">deepwalk embeddig</a>. 
+
+We evaluated the effect of introducing experts distribution on the quality of discovery predictions in the context of materials science, disease therapies and vaccination. Numerical results showed that applying our algorithm led up to 100% precision increase in distinguishing materials with certain enery-related properties (thermoelectricity, ferroelectricity, being photovoltaic), average 43% increase in drugs repurposing for one hundred human diseases, and a boost of 260% in therapy/vaccine prediction for COVID-19 (see the figure below).
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/covid_results.png' | relative_url }}" alt="" title="results on COVID-19" width=1552 height=800/>
+    </div>
+</div>
+<div class="caption">
+     Results of predicting COVID-19 therapies and vaccines based on articles published before 2020 (~28M papers retrieved from PubMed database) using algorithms based on our expert-aware hypergraph (green and blue curves corresponding to deepwalk variants and transition probability scoring, respectively), content-based word2vec and a random baseline. We have also included the result of an algorithm that scored drugs based on their protein interaction with COVID-19, a piece of information that our hypergraph was blind to, which was still outperformed by our hypergraph-based measures. See further details in <a href="https://arxiv.org/pdf/2104.05188.pdf">our paper</a>.
+</div>
+
+<a href="#top">Back to Top </a>
+
+<a name="alien_AI"></a>
+<h4><b> Alien AI for Punctuating Disruptive Discoveries </b></h4>
+Our expert-aware algorithm described above also enabled us to avoid the distribution of experts to generate hypotheses that are not imaginable by human scientists without machine intervention. These types of hypotheses are likely to escape scientists' collective attention based on their professional networking and prior research experience. We developed a simple algorithm to identify materials that are far from the property node in our hypergraph (in terms of shortest-path distance) and at the same time show high semantic relationship with the property. These materials are coginitively inavailable to scientists and authors due to their high distance to the property, yet are potentially good candidates of possessing the property due to their high semantic similarities with respect to the property. We actually showed that in practice such "alien" hypotheses could be very promising even when they are infinitely far from the property node (see the figure below).
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/alien_circles.png' | relative_url }}" alt="" title="result of our alien AI algorithm" width=1552 height=800/>
+    </div>
+</div>
+<div class="caption">
+   Distribution of discoveries and predictions in terms of their distance to the property node (here, thermoelectricity) color-coded in terms of how scientifically promising they are (measured by Power Factor (PF), a key theoretical score for thermoelectricity). The center indicates the property node. <b>(top)</b> actual thermoelectric discoveries in different years (concentrated in the first two orbits with high average PF values); <b>(bottom-left)</b> all materials that could be candidates of discovery in different years (distributed more uniformly across various orbits but lower PF values); <b>(right-bottom)</b> predictions of our alien AI algorithm with beta (between zero and one) defining how much emphasis we give to expert avoidance (a more balanced trade-off between distance and PF distributions). See further details in <a href="https://arxiv.org/pdf/2104.05188.pdf">our paper</a>.
+</div>
+
+Our findings imply that the pattern of scientific discoveries is highly predictable merely through the coauthorship network and the prior experience of the scientists, without any prior knowledge of the underlying theories and even without the knowledge of the content of the prior literature. These patterns, in one hand, could enable us to predict the upcoming future discoveries, and on the other hand, help us distinguish and escape collective biases in the course of scientific discoveries, and thereby open doors to previously unimaginable hypotheses.
 
 <a href="#top">Back to Top </a>

@@ -28,8 +28,8 @@ Below is a list of my selected publications by categories in reversed chronologi
 </div>
 
 
-<h3><b><em> In Preparation </em></b></h3>
+<h3><b> Science of Science </b></h3>
 <div class="publications">
-  {% bibliography -f papers_inprep %}
+  {% bibliography -f papers_sos %}
 </div>
 
