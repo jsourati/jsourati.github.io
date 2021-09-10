@@ -6,7 +6,7 @@ description: Few of my research projects during my Ph.D. and postdoc are listed 
 nav: true
 ---
 <a name="top"></a>
-My projects could be divided into two distinct groups: (1) developing generic Active Learning (AL) methods and applying them on various applications including medical image processing, and (2) applying machine learning and network analysis to incorporate social aspects of science in knowledge production and scientific discoveries.
+My projects could be divided into two distinct groups: (1) developing generic Active Learning (AL) methods and applying them on various applications including medical image processing, and (2) applying machine learning and network analysis to incorporate social aspects of science in stuyding knowledge production and scientific discoveries.
 
 <h5><b> Contents </b></h5>
 
