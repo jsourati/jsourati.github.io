@@ -6,7 +6,7 @@ description: <em>Department of Sociology, University of Chicago</em>
 
 profile:
   align: right
-  image: personal_.jpg
+  image: ca_me.jpg
   address: >
 
 news: false  # includes a list of news items
