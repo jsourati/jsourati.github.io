@@ -10,6 +10,7 @@ Below is a list of my selected publications by categories in reversed chronologi
 
 <h3><b> Generic Active Learning </b></h3>
 <div class="publications">
+{% bibliography -f papers -q @*[year=2022]* %}
 {% for y in page.years %}
   {% bibliography -f papers -q @*[year={{y}}]* %}
 {% endfor %}
@@ -30,6 +31,7 @@ Below is a list of my selected publications by categories in reversed chronologi
 
 <h3><b> Science of Science </b></h3>
 <div class="publications">
-  {% bibliography -f papers_sos %}
+  {% bibliography -f papers_sos -q @*[year=2022]* %}
+  {% bibliography -f papers_sos -q @*[year=2021]* %}
 </div>
 
