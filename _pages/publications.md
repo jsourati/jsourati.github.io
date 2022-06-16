@@ -6,7 +6,7 @@ description:
 years: [2017, 2016]
 nav: true
 ---
-Below is a list of my selected publications by categories in reversed chronological order. For the full list see my [CV]({{ site.url }}/assets/pdf/myCV.pdf).
+Below is a list of my selected publications by categories in reversed chronological order. See my [CV]({{ site.url }}/assets/pdf/myCV.pdf) for a more comprehensive list, and my [Google Scholar](https://scholar.google.com/citations?user=JeVyxh4AAAAJ&hl=en&oi=sra) for the complete records.
 
 <h3><b> Generic Active Learning </b></h3>
 <div class="publications">
@@ -29,7 +29,7 @@ Below is a list of my selected publications by categories in reversed chronologi
 </div>
 
 
-<h3><b> Science of Science </b></h3>
+<h3><b> AI-assisted Knowledge Discovery </b></h3>
 <div class="publications">
   {% bibliography -f papers_sos -q @*[year=2022]* %}
   {% bibliography -f papers_sos -q @*[year=2021]* %}

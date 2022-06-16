@@ -7,8 +7,7 @@ nav: true
 
 <h3><b> Research Interest </b></h3>
 <ul>
-    <li>Science of Science, Computational Social Science, History/Philosophy of Science</li>
-    <li>Machine Learning, Active Learning, Data Science, Network Representation</li>
+    <li>Machine Learning, Active Learning, Statistical Learning, Data Science, Natural Language Processing, Network Representation Learning</li>
 </ul>
 
 <h3><b> Academic Appointments </b></h3>
@@ -32,4 +31,11 @@ nav: true
     <li>Sharif University of Technology, Tehran, Iran</li>
     B.Sc. in Electrical Engineering
     <br><em>September 2006 - December 2010 </em>
+</ul>
+
+<h3><b> Internship </b></h3>
+<ul>
+    <li>Quantlab Inc., Boston MA</li>
+    Data Analyst Researcher
+    <br><em>June 2016 - August 2016</em>
 </ul>
