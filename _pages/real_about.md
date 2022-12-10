@@ -27,6 +27,7 @@ nav: true
     <li>Northeastern University, Boston MA</li>
     Ph.D. in Electrical and Computer Engineering
     <br><em>January 2011 - December 2016</em>
+    <br>Dissertation: <a href="https://www.proquest.com/docview/1874468873?pq-origsite=gscholar&fromopenview=true">"Information theoretic active learning in unsupervised and supervised problems"</a>
     <br>  <br>
     <li>Sharif University of Technology, Tehran, Iran</li>
     B.Sc. in Electrical Engineering
